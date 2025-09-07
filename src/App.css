@@ -1,38 +1,90 @@
 .ipod {
-  width: 250px;
+  width: 280px;
+  height: 500px;
   margin: 50px auto;
-  border: 3px solid black;
-  border-radius: 25px;
+  border: 4px solid #222;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #ffffff, #dcdcdc);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  background: #f9f9f9;
 }
 
+/* Screen */
 .screen {
-  height: 150px;
-  background: #ddd;
+  height: 200px;
+  background: #b73d3d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  border-bottom: 2px solid #111;
+}
+
+/* Wheel */
+.wheel {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.wheel {
-  height: 150px;
+.inner-wheel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   align-items: center;
-  background: #eee;
-  border-top: 2px solid #ccc;
+  justify-content: center;
+  box-shadow: inset -5px -5px 12px #ffffff, inset 5px 5px 12px #c5c5c5;
 }
 
-.wheel button {
-  width: 80px;
-  height: 40px;
-  margin: 10px;
-  border-radius: 10px;
+/* Buttons inside wheel */
+.inner-wheel button {
+  position: absolute;
+  background: none;
   border: none;
+  font-size: 14px;
+  font-weight: bold;
   cursor: pointer;
-  background: #007bff;
-  color: white;
-  font-size: 16px;
+  color: #333;
+  outline: none;
+}
+
+.menu-btn {
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.next-btn {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev-btn {
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.play-btn {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Center button */
+.center-btn {
+  width: 70px;
+  height: 70px;
+  background: #e0e0e0;
+  border-radius: 50%;
+  box-shadow: inset -3px -3px 8px #ffffff, inset 3px 3px 8px #c5c5c5;
 }
